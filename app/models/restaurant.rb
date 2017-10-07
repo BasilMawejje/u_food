@@ -1,3 +1,3 @@
 class Restaurant < ApplicationRecord
-  has_one :restaurant_category
+  belongs_to :restaurant_category
 end
