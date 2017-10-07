@@ -3,6 +3,6 @@
 - @categories.each do |category|
   %h5= category.name
   %p= category.description
-- @restaurants.each do |restaurant|
-  = link_to restaurant.name, restaurant_path(restaurant)
-  %p= restaurant.address
+  - @restaurants.each do |restaurant|
+    = link_to restaurant.name, restaurant_path(restaurant)
+    %p= restaurant.address
