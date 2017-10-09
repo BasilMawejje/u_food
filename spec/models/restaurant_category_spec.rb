@@ -12,4 +12,8 @@ RSpec.describe RestaurantCategory, type: :model do
     it { is_expected.to have_db_column :name }
     it { is_expected.to have_db_column :description }
   end
+
+  context `validations` do
+    it { is_expected.to have_many(:restaurants) }
+  end
 end

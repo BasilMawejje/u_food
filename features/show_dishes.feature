@@ -4,12 +4,15 @@ Feature: user can see dishes and their info
   I would like to see a list of dishes and info about them
 
   Background:
+    Given the following category exists
+      | name    | description  |
+      | Thai    | Thai food    |
     Given the following dishes exists
       | name        | description         | price | pic_url               | restaurant | category |
       | Sushi rolls | Tasty Japanese food | 10    | https://goo.gl/fH7P5F | Ai         | Main     |
     And the following restaurants exist
-      | name    | address   |
-      | My Thai | Stockholm |
+      | name    | address   | restaurant_category |
+      | My Thai | Stockholm | Thai                |
     And I navigate to the index page
     And I click "My Thai"
 
